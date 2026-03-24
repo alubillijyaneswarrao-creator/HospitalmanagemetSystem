@@ -1,0 +1,11 @@
+<h2>Edit Patient</h2>
+
+<form (ngSubmit)="update()">
+    <input [(ngModel)]="patient.patientId" name="id" readonly>
+    <input [(ngModel)]="patient.name" name="name">
+    <input [(ngModel)]="patient.age" name="age">
+    <input [(ngModel)]="patient.disease" name="disease">
+    <input [(ngModel)]="patient.doctor" name="doctor">
+
+    <button>Update</button>
+</form>

@@ -1,0 +1,11 @@
+<h2>Add Patient</h2>
+
+<form (ngSubmit)="save()">
+    <input placeholder="ID" [(ngModel)]="patient.patientId" name="id">
+    <input placeholder="Name" [(ngModel)]="patient.name" name="name">
+    <input placeholder="Age" [(ngModel)]="patient.age" name="age">
+    <input placeholder="Disease" [(ngModel)]="patient.disease" name="disease">
+    <input placeholder="Doctor" [(ngModel)]="patient.doctor" name="doctor">
+
+    <button>Add</button>
+</form>

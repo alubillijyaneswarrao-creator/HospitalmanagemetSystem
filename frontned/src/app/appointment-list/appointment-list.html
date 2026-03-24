@@ -1,0 +1,15 @@
+<h3>📅 Appointments</h3>
+
+<table class="table table-bordered text-center">
+    <tr *ngFor="let a of appointments">
+        <td>{{a.patientName}}</td>
+        <td>{{a.doctorName}}</td>
+        <td>{{a.date}}</td>
+
+        <td>
+            <button class="btn btn-danger btn-sm" (click)="delete(a._id)">
+                Delete
+            </button>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark bg-dark px-4">
+  <span class="navbar-brand fw-bold">🏥 HMS Pro</span>
+
+  <!-- CHECK LOGIN -->
+  <div *ngIf="isLoggedIn(); else showAuth">
+
+    <a routerLink="/" class="btn btn-outline-light me-2">Dashboard</a>
+    <a routerLink="/patients" class="btn btn-primary me-2">Patients</a>
+    <a routerLink="/add" class="btn btn-success me-2">Add Patient</a>
+    <a routerLink="/appointments" class="btn btn-warning me-2">Appointments</a>
+    <a routerLink="/book" class="btn btn-info me-2">Book</a>
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
+
+  </div>
+
+  <!-- SHOW LOGIN + REGISTER -->
+  <ng-template #showAuth>
+    <a routerLink="/login" class="btn btn-warning me-2">Login</a>
+    <a routerLink="/register" class="btn btn-success">Register</a>
+  </ng-template>
+
+</nav>
+
+<div class="container mt-4">
+    <router-outlet></router-outlet>
+</div>

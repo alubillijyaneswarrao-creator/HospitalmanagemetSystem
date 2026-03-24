@@ -1,0 +1,13 @@
+<div class="card p-4 shadow mx-auto" style="max-width:400px">
+    <h4 class="mb-3">📅 Book Appointment</h4>
+
+    <form (ngSubmit)="save()">
+        <input class="form-control mb-2" placeholder="Patient Name" [(ngModel)]="data.patientName" name="p">
+
+        <input class="form-control mb-2" placeholder="Doctor Name" [(ngModel)]="data.doctorName" name="d">
+
+        <input type="date" class="form-control mb-3" [(ngModel)]="data.date" name="date">
+
+        <button class="btn btn-primary w-100">Book</button>
+    </form>
+</div>
